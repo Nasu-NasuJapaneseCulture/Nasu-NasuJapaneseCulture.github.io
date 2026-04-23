@@ -8,36 +8,23 @@
 <meta name="description" content="A cozy website about Japanese food, fermentation, and culture."
 
 <head>
-<style>
-  a {
-  color: #c5c56a;
-}
-body {
-  margin: 0;
-  font-family: 'Arial','monospace',sans-serif;
-}
-
+  <style>
+  a {color: #c5c56a;}
+body {margin: 0;
+  font-family: 'Arial','monospace',sans-serif;}
 .header {
   position: fixed;
   top: 0;
-  width: 100%;
-}
+  width: 100%;}
 
-.content {
-  padding: 20px;
-}
+.content {padding: 20px;}
 
-img {
-  display: block;
-}
+img {display: block;}
 /* ここから上が教えてくれた事 */
 
 /* ここから下がハンバーガーメニューに関するCSS */
-  
 /* チェックボックスを非表示にする */
-.drawer_hidden {
-  display: none;
-}
+.drawer_hidden {display: none;}
 
 /* ハンバーガーアイコンの設置スペース */
 .drawer_open {
@@ -48,8 +35,7 @@ img {
   align-items: center;
   position: relative;
   z-index: 100;/* 重なり順を一番上にする */
-  cursor: pointer;
-}
+  cursor: pointer;}
 
 /* ハンバーガーメニューのアイコン */
 .drawer_open span,
@@ -60,37 +46,28 @@ img {
   height: 3px;
   width: 25px;
   border-radius: 3px;
-  background: #dcd3b2;
+  background: #dcdcdc;
   transition: 0.5s;
-  position: absolute;
-}
+  position: absolute;}
 
 /* 三本線の一番上の棒の位置調整 */
 .drawer_open span:before {
-  bottom: 8px;
-}
+  bottom: 8px;}
 
 /* 三本線の一番下の棒の位置調整 */
-.drawer_open span:after {
-  top: 8px;
-}
+.drawer_open span:after {top: 8px;}
 
 /* アイコンがクリックされたら真ん中の線を透明にする */
 #drawer_input:checked ~ .drawer_open span {
-  background: rgba(255, 255, 255, 0);
-}
+  background: rgba(255, 255, 255, 0);}
 
 /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
 #drawer_input:checked ~ .drawer_open span::before {
 bottom: 0;
-transform: rotate(45deg);
-}
+transform: rotate(45deg);}
 #drawer_input:checked ~ .drawer_open span::after {
 top: 0;
-transform: rotate(-45deg);
-}
-
-  
+transform: rotate(-45deg);}
 
 /* メニューのデザイン*/
 .nav_content {
@@ -103,37 +80,34 @@ z-index: 99;
 background: rgba(50, 65, 50,90);           
 transition: .5s;
 text-align: center;
-padding-top: 20px;
-}
+padding-top: 20px;}
   
 /* メニュー黒ポチを消す */
 .nav_list {
-  list-style: none;
-}
+  list-style: none;}
 
 /* アイコンがクリックされたらメニューを表示 */
 #drawer_input:checked ~ .nav_content {
-right: 0;
-}
+right: 0;}
 
 </style>
 
 <div class="header">
-  <img src="IMG_2526.jpeg" width="100%">
+<img src="IMG_2528.jpeg" width="100%">
 </div>
-
+<link rel="icon" href="IMG_2533.png">
+<link rel="apple-touch-icon" href="IMG_2533.png">
 </head>
-<body bgcolor="#513743" text="#dcd3b2">
-
+<body bgcolor="#333631" text="#dcd3b2">
 
 <!-- ハンバーガーメニュー部分 -->
 <div class="nav">
     
 <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+<input id="drawer_input" class="drawer_hidden" type="checkbox">
     
-        <!-- ハンバーガーアイコン -->
-        <label for="drawer_input" class="drawer_open"><span></span></label>
+<!-- ハンバーガーアイコン -->
+<label for="drawer_input" class="drawer_open"><span></span></label>
     
 <!-- メニュー -->
 <nav class="nav_content">
@@ -146,11 +120,13 @@ right: 0;
 </nav>
 </div>
 <br>
-  <br>
-  <br>
+<br>
+<br>
+<div class="content">
 <h2>Japanese & cherry blossoms🌸</h2>
 <br>
 <div class="content">
+<img src="IMG_2564.jpeg" width="100%"><br>
 <br>
 <p>From March to April, cherry blossoms bloom across Japan. 🌸<br><br>
 In the past, there was a culture of holding hanami parties with colleagues and friends, but such opportunities have become less common. ⛲️<br>
@@ -162,9 +138,8 @@ The image below is a flyer about Japan’s unique aesthetic and worldview regard
 Please take a look if you’d like.<br></p>
 <img src="IMG_2451.jpeg" width="100%"><br>
 <br><br>
-<img src="IMG_2371.jpeg" width=300px"><br><br>
-  <p>This year, it started to fall, but I went to see the cherry blossoms while taking a walk.🌸</p>
-<br><br>
+<img src="IMG_2451.jpeg" width=300px"><br>
+<br>
 <h5 style="text-align:center">All of these were made with an old iPhone.📱</h5>
 <h5 style="text-align:center">©  Nasu🍆Nasu All rights reserved</h5>
 </div>
