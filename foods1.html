@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Wabi Sabi JP Kitchen</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8">
-<meta name="description" content="A cozy website about Japanese food, fermentation, and culture."
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wabi Sabi JP Kitchen</title>
+<meta name="description" content="A cozy website about Japanese food, fermentation, and culture.">
 
-<head>
-  <link rel="icon" href="IMG_2533.png">
-<link rel="apple-touch-icon" href="IMG_2533.png">
-  <style>
+<link rel="apple-touch-icon" href="IMG_2606.png">
+<link rel="icon" href="IMG_2606.png" sizes="192x192">
+
+<style>
   a {color: #c5c56a;}
 body {margin: 0;
   font-family: 'Arial','monospace',sans-serif;}
@@ -79,7 +78,7 @@ position: fixed;
 top: 0%;
 right: 100%; /* メニューを画面の外に飛ばす */
 z-index: 99;
-background: rgba(50, 65, 50,90);           
+background: rgba(50, 65, 50, 90);           
 transition: .5s;
 text-align: center;
 padding-top: 20px;}
@@ -92,15 +91,33 @@ padding-top: 20px;}
 #drawer_input:checked ~ .nav_content {
 right: 0;}
 
+/* 文字を大きくバーガー内 */
+.nav_list {
+  list-style: none;
+  padding: 0;}
+.nav_item a {
+  display: block;
+  font-size: 24px;   /* ←大きく！ */
+  padding: 15px;     /* ←余白で押しやすく */
+  color: #e4d6a1;
+  text-decoration: none;}
+/* 改行して広くするバーガー内 */
+.nav_item {
+  margin: 15px 0;}
+/* 中央寄せバーガー内 */
+.nav_content {
+  text-align: center;}
+
 </style>
 
+</head>
+
+<body bgcolor="#46502d" text="#dcd3b2">
+
+<!-- 自分の作ったヘッダー -->
 <div class="header">
 <img src="IMG_2528.jpeg" width="100%">
 </div>
-<link rel="icon" href="IMG_2533.png">
-<link rel="apple-touch-icon" href="IMG_2533.png">
-</head>
-<body bgcolor="#46502d" text="#dcd3b2">
 
 <!-- ハンバーガーメニュー部分 -->
 <div class="nav">
@@ -114,10 +131,9 @@ right: 0;}
 <!-- メニュー -->
 <nav class="nav_content">
 <ul class="nav_list">
-<li class="nav_item"><a href="index.html">Top</a></li
+<li class="nav_item"><a href="index.html">Top</a></li>
 <li class="nav_item"><a href="aboutme.html">About Me</a></li>
 <li class="nav_item"><a href="explore.html">explore</a></li>
-<li class="nav_item"><a href="">Others</a></li>
 </ul>
 </nav>
 </div>
@@ -125,13 +141,13 @@ right: 0;}
 <br>
 <br>
 <div class="content">
+
+
 <h2>Japanese Fermented food 1 </h2>
 <br>
 <br>
-<br>
-
-<br>
-<img src="IMG_0000.jpeg" width="100%"><br>
+<p>文章</p>
+<img src="IMG_写真.jpeg" width="100%"><br>
 <br>
 <h5 style="text-align:center">All of these were made with an old iPhone.📱</h5>
 <h5 style="text-align:center">©  Nasu🍆Nasu All rights reserved</h5>
