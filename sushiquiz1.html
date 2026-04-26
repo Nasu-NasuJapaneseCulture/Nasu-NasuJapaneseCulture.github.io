@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wabi Sabi JP Kitchen</title>
+<meta name="description" content="A cozy website about Japanese food, fermentation, and culture.">
 
+<link rel="apple-touch-icon" href="IMG_2606.png">
+<link rel="icon" href="IMG_2606.png" sizes="192x192">
+
+<style>
+  a {color: #c5c56a;}
+body {margin: 0;
+  font-family: 'Arial','monospace',sans-serif;}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;}
+
+.content {padding: 20px;}
+/* 動画サイズ合わせるため↓ */
+img {display: block;}
+iframe {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border: none;}
+/* ここから上が教えてくれた事 */
+
+/* ここから下がハンバーガーメニューに関するCSS */
+/* チェックボックスを非表示にする */
+.drawer_hidden {display: none;}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #dcdcdc;
+  transition: 0.5s;
+  position: absolute;}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {top: 8px;}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+bottom: 0;
+transform: rotate(45deg);}
+#drawer_input:checked ~ .drawer_open span::after {
+top: 0;
+transform: rotate(-45deg);}
+
+/* メニューのデザイン*/
+.nav_content {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0%;
+right: 100%; /* メニューを画面の外に飛ばす */
+z-index: 99;
+background: rgba(50, 65, 50, 90);           
+transition: .5s;
+text-align: center;
+padding-top: 20px;}
+  
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+right: 0;}
+
+/* 文字を大きくバーガー内 */
+.nav_list {
+  list-style: none;
+  padding: 0;}
+.nav_item a {
+  display: block;
+  font-size: 24px;   /* ←大きく！ */
+  padding: 15px;     /* ←余白で押しやすく */
+  color: #e4d6a1;
+  text-decoration: none;}
+/* 改行して広くするバーガー内 */
+.nav_item {
+  margin: 15px 0;}
+/* 中央寄せバーガー内 */
+.nav_content {
+  text-align: center;}
+
+</style>
+
+</head>
+
+<body bgcolor="#46502d" text="#dcd3b2">
+
+<!-- 自分の作ったヘッダー -->
+<div class="header">
+<img src="IMG_2528.jpeg" width="100%">
+</div>
+
+<!-- ハンバーガーメニュー部分 -->
+<div class="nav">
+    
+<!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+<input id="drawer_input" class="drawer_hidden" type="checkbox">
+    
+<!-- ハンバーガーアイコン -->
+<label for="drawer_input" class="drawer_open"><span></span></label>
+    
+<!-- メニュー -->
+<nav class="nav_content">
+<ul class="nav_list">
+<li class="nav_item"><a href="index.html">Top</a></li>
+<li class="nav_item"><a href="aboutme.html">About Me</a></li>
+<li class="nav_item"><a href="explore.html">explore</a></li>
+</ul>
+</nav>
+</div>
+<br>
+<br>
+<br>
+<div class="content">
+
+
+<h2>The Conveyor Belt Sushi Quiz 1 </h2>
+<br>
+<br>
+  <br>
+
+<img src="IMG_2706.jpeg" width="100%"><br>
+<p>A story about a conveyor-belt sushi restaurant that brought back memories of a familiar taste.<br>
+This is something that surprised me recently.🫢<br>
+  Please do try taking part in the quiz.💡 <br>
+  It really makes me feel like the world has changed.🌏 <br><br>
+
+  I made it a bit of a joke.🤡 <br>
+I’m curious about how fast conveyor-belt sushi moves in other parts of the world, but here, it’s just incredibly fast!
+
+💦
+This is a bit of a departure from Japanese food, but I really love this particular dish. 🍽️<br>
+The specialty shop I like that sells it is just so far away. 😵<br>
+It’s also a hassle to make it myself. 😵<br><br>
+Due to certain circumstances, I haven’t been able to visit that shop much, but it’s a small place run by a Japanese person.<br>
+While the authentic version is delicious, the people at that little shop are so friendly, and the food tastes great.😋<br>
+It’s a tough time for small businesses to stay afloat, so I really hope it stays open.💦 <br>
+I’d love to go back.💭</p>
+  
+<iframe title="The Conveyor Belt Sushi Quiz Show" width="560" height="315" src="https://dudelike.wtf/videos/embed/4r1nt8pqvz9buLnehEcPUr" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+
+<br>
+<h5 style="text-align:center">All of these were made with an old iPhone.📱</h5>
+<h5 style="text-align:center">©  Nasu🍆Nasu All rights reserved</h5>
+</div>
+</body>
+</html>
