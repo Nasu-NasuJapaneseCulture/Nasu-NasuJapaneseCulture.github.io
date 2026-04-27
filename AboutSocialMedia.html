@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wabi Sabi JP Kitchen</title>
+<meta name="description" content="A cozy website about Japanese food, fermentation, and culture.">
+
+<link rel="apple-touch-icon" href="IMG_2606.png">
+<link rel="icon" href="IMG_2606.png" sizes="192x192">
+
+<style>
+  a {color: #c5c56a;}
+body {margin: 0;
+  font-family: 'Arial','monospace',sans-serif;}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;}
+
+.content {padding: 20px;}
+
+img {display: block;}
+/* ここから上が教えてくれた事 */
+
+/* ここから下がハンバーガーメニューに関するCSS */
+/* チェックボックスを非表示にする */
+.drawer_hidden {display: none;}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #dcdcdc;
+  transition: 0.5s;
+  position: absolute;}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {top: 8px;}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+bottom: 0;
+transform: rotate(45deg);}
+#drawer_input:checked ~ .drawer_open span::after {
+top: 0;
+transform: rotate(-45deg);}
+
+/* メニューのデザイン*/
+.nav_content {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0%;
+right: 100%; /* メニューを画面の外に飛ばす */
+z-index: 99;
+background: rgba(50, 65, 50, 90);           
+transition: .5s;
+text-align: center;
+padding-top: 20px;}
+  
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+right: 0;}
+
+/* 文字を大きくバーガー内 */
+.nav_list {
+  list-style: none;
+  padding: 0;}
+.nav_item a {
+  display: block;
+  font-size: 24px;   /* ←大きく！ */
+  padding: 15px;     /* ←余白で押しやすく */
+  color: #e4d6a1;
+  text-decoration: none;}
+/* 改行して広くするバーガー内 */
+.nav_item {
+  margin: 15px 0;}
+/* 中央寄せバーガー内 */
+.nav_content {
+  text-align: center;}
+
+</style>
+
+</head>
+
+<body bgcolor="black" text="#dcd3b2">
+
+<!-- 自分の作ったヘッダー -->
+<div class="header">
+<img src="IMG_2528.jpeg" width="100%">
+</div>
+
+<!-- ハンバーガーメニュー部分 -->
+<div class="nav">
+    
+<!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+<input id="drawer_input" class="drawer_hidden" type="checkbox">
+    
+<!-- ハンバーガーアイコン -->
+<label for="drawer_input" class="drawer_open"><span></span></label>
+    
+<!-- メニュー -->
+<nav class="nav_content">
+<ul class="nav_list">
+<li class="nav_item"><a href="index.html">Top</a></li>
+<li class="nav_item"><a href="aboutme.html">About Me</a></li>
+<li class="nav_item"><a href="explore.html">explore</a></li>
+
+</ul>
+</nav>
+</div>
+<br>
+<br>
+<br>
+<div class="content">
+
+<h2>About Social Media in Japan</h2>
+<br>
+<div class="content">
+<p>
+In the past, there used to be many social media platforms unique to Japan. 🐒<br>
+However, today, most of them have disappeared.😵<br>
+Instagram and one other platform are currently well-known, but to be honest, I don’t feel comfortable signing up for them.
+Personally, I’ve always been quite busy, so I haven’t spent much time actively using social media.🤷<br>
+If this topic is unpleasant, I apologize.
+For me, X (formerly Twitter) has mainly been a tool for gathering information about current events, rather than for posting. One reason I use it is because Japan experiences many earthquakes, and information about disasters spreads very quickly there. About half of the population uses it.🇯🇵📱🫨<br>
+I also don’t own a TV, so I rely on the web for information. Although the number of users on X has decreased, there are still many people from different backgrounds and perspectives. <br>
+I find it useful because it allows me to see things from multiple viewpoints. 🌏👀<br>
+While there is an algorithm, I try to manage it carefully.<br>
+<br>
+Recently, I’ve felt a desire to share Japanese culture with others. 🇯🇵<br>
+This comes from a concern that it may gradually be lost due to rapid modernization and globalization. ⚙️🔧<br>
+In many parts of the world, Asia is often seen as a single, similar region, but each place actually has its own unique culture.✨<br>
+However, I find it difficult to share content on X. This is partly because I have very few followers (since I mostly used it just for browsing), and also because the flow of information is too fast.🏎️💨<br><br>
+Using YouTube is not an option for me, so after some research, I discovered PeerTube. 
+🔍<br>
+Fortunately, I found a wonderful instance run by Mr. Funk E. Dude and I was able to join it.🍀<br>
+<br>
+I had heard of Mastodon before, but I didn’t know about the concept of the Fediverse, so I used to think that X alone was enough for me. <br>
+However, since Mr. Funk E. Dude kindly invited me, I decided to try Mastodon, which I was already somewhat familiar with. 🐘<br>
+Since it is connected to PeerTube, I felt it would likely be a good platform, and that’s how I ended up there.😃🌟<br>
+<br>
+#### __Additional Note__
+I considered choosing a major Japanese blog service, even though there are a few ads, but a few months ago it fell under the control of Google and succumbed to the dark side. 👾🪐<br>
+In Japan, there are only blog services that have fallen to the dark side. Unfortunately, there are nothing but Darth Vaders everywhere.👾🗾👾<br>
+I recently became a GitHub user, but __I am not a programmer__. Unfortunately, I only have a little experience with HTML from a long time ago, so my website is quite simple.😵<br>
+After thinking carefully about how to create a website without collecting personal data, this was the option I arrived at. 🤔<br>
+It would be nice if there were more alternatives, but many options have also disappeared. In Japan, no matter which platform you choose, advertising systems such as those from large companies tend to be involved.<br>
+Since I’m working with limited knowledge and an older iPhone, there may be some rough edges, but I hope you can understand.🙏<br>
+</p>
+<img src="IMG_2765.jpeg" width="100%"><br>
+<br>
+<br>
+<h5 style="text-align:center">All of these were made with an old iPhone.📱</h5>
+<h5 style="text-align:center">©  Nasu🍆Nasu All rights reserved</h5>
+</div>
+</body>
+</html>
