@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Echoes & Shadows</title>
+<meta name="description" content="AI and handmade music, 1970s-1990s, stopmotion art.">
+
+<link rel="apple-touch-icon" href="IMG_2606.png">
+<link rel="icon" href="IMG_2606.png" sizes="192x192">
+
+<style>
+  a {color: #c5c56a;}
+body {margin: 0;
+  font-family: 'Arial','monospace',sans-serif;}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;}
+
+.content {padding: 20px;}
+
+img {display: block;}
+/* ここから上が教えてくれた事 */
+
+/* ここから下がハンバーガーメニューに関するCSS */
+/* チェックボックスを非表示にする */
+.drawer_hidden {display: none;}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #dcdcdc;
+  transition: 0.5s;
+  position: absolute;}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {top: 8px;}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+bottom: 0;
+transform: rotate(45deg);}
+#drawer_input:checked ~ .drawer_open span::after {
+top: 0;
+transform: rotate(-45deg);}
+
+/* メニューのデザイン*/
+.nav_content {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0%;
+right: 100%; /* メニューを画面の外に飛ばす */
+z-index: 99;
+background: rgba(50, 65, 50, 90);           
+transition: .5s;
+text-align: center;
+padding-top: 20px;}
+  
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+right: 0;}
+
+/* 文字を大きくバーガー内 */
+.nav_list {
+  list-style: none;
+  padding: 0;}
+.nav_item a {
+  display: block;
+  font-size: 24px;   /* ←大きく！ */
+  padding: 15px;     /* ←余白で押しやすく */
+  color: #e4d6a1;
+  text-decoration: none;}
+/* 改行して広くするバーガー内 */
+.nav_item {
+  margin: 15px 0;}
+/* 中央寄せバーガー内 */
+.nav_content {
+  text-align: center;}
+
+</style>
+
+</head>
+
+<body bgcolor="black" text="#dcd3b2">
+
+<!-- 自分の作ったヘッダー -->
+<div class="header">
+<img src="IMG_2870.jpeg" width="100%">
+</div>
+
+<!-- ハンバーガーメニュー部分 -->
+<div class="nav">
+    
+<!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+<input id="drawer_input" class="drawer_hidden" type="checkbox">
+    
+<!-- ハンバーガーアイコン -->
+<label for="drawer_input" class="drawer_open"><span></span></label>
+    
+<!-- メニュー -->
+<nav class="nav_content">
+<ul class="nav_list">
+<li class="nav_item"><a href="index.html">Top</a></li>
+<li class="nav_item"><a href="aboutme.html">About Me</a></li>
+<li class="nav_item"><a href="explore.html">explore</a></li>
+
+</ul>
+</nav>
+</div>
+<br>
+<br>
+<br>
+<div class="content">
+
+<h2>Thoughts on How to Coexist with AI💭</h2>
+<br>
+<p>Talking about AI often leads to debates… It’s the kind of era we live in. People seem to be split into two camps: those who feel uncomfortable with it on a physiological level, and those who are relentlessly chasing after technological advancement.<br><br>
+I’m in the middle.<br><br>
+I believe that the healthy approach for humans is to let AI assist with things we can’t do ourselves, rather than relying on it for everything.<br><br>
+In the past, home appliances would work when you pressed a button, and stop when you turned them off. The concept of standby power didn’t exist. Over time, the concept of standby power was introduced, and it became normal for plugs to remain plugged in all the time. Technology evolves quickly. But AI is not just another household appliance anymore. It brings about the concept of "thinking and predicting."<br><br>
+Now we live in a time when it’s possible to say, "Hey! ◯◯ (AI), set the temperature of my room to a comfortable level when I get home! Also, order pizza for dinner and make sure it’s delivered! And book my gym appointment for 10 a.m. tomorrow!" all through our smartphones.<br><br>
+But doesn’t that make us, as human beings, regress? In the end, we might end up like primates. If we reduce the effort of thinking for every little task, it doesn’t matter if we still have the physical form of humans—we’ll be in a society where we can’t think for ourselves, no matter how much we learn. Furthermore, communication fees, device costs, and subscription charges are only going to increase. At some point, I realized that I’m the type who wants to keep using old things, customizing them if possible, until they break. That’s why I use an old iPhone with small storage.<br><br>
+So, I think it’s best to do what you can on your own and only ask for assistance in areas where you truly need it. Using technology only when necessary, turning it on and off, is healthier for developing a more balanced human experience. I don’t deny AI, but I think going too far with it is unhealthy.<br><br>
+Over time, "It’s so troublesome!" "I want to save time!" "It has to be cost-effective!" has become the norm in society.<br><br>
+When it comes to coexisting with AI, I see it as a partnership, but we must not become overly dependent on it. I believe that if we maintain this balance, we’ll develop a sense of gratitude toward machines and take better care of them.<br>
+</p>
+<br>
+<br>
+<h5 style="text-align:center">All of these were made with an old iPhone.📱</h5>
+<h5 style="text-align:center">©  Nasu🍆Nasu All rights reserved</h5>
+</div>
+</body>
+</html>
