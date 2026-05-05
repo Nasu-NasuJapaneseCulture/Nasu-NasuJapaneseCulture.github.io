@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wabi Sabi JP Kitchen</title>
+<meta name="description" content="A cozy website about Japanese food, fermentation, and culture.">
+
+<link rel="apple-touch-icon" href="IMG_2606.png">
+<link rel="icon" href="IMG_2606.png" sizes="192x192">
+
+<style>
+  a {color: #c5c56a;}
+body {margin: 0;
+  font-family: 'Arial','monospace',sans-serif;}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;}
+
+.content {padding: 20px;}
+
+img {display: block;}
+/* ここから上が教えてくれた事 */
+
+/* ここから下がハンバーガーメニューに関するCSS */
+/* チェックボックスを非表示にする */
+.drawer_hidden {display: none;}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #dcdcdc;
+  transition: 0.5s;
+  position: absolute;}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {top: 8px;}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+bottom: 0;
+transform: rotate(45deg);}
+#drawer_input:checked ~ .drawer_open span::after {
+top: 0;
+transform: rotate(-45deg);}
+
+/* メニューのデザイン*/
+.nav_content {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0%;
+right: 100%; /* メニューを画面の外に飛ばす */
+z-index: 99;
+background: rgba(50, 65, 50, 90);           
+transition: .5s;
+text-align: center;
+padding-top: 20px;}
+  
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+right: 0;}
+
+/* 文字を大きくバーガー内 */
+.nav_list {
+  list-style: none;
+  padding: 0;}
+.nav_item a {
+  display: block;
+  font-size: 24px;   /* ←大きく！ */
+  padding: 15px;     /* ←余白で押しやすく */
+  color: #e4d6a1;
+  text-decoration: none;}
+/* 改行して広くするバーガー内 */
+.nav_item {
+  margin: 15px 0;}
+/* 中央寄せバーガー内 */
+.nav_content {
+  text-align: center;}
+
+</style>
+
+</head>
+
+<body bgcolor="black" text="#dcd3b2">
+
+<!-- 自分の作ったヘッダー -->
+<div class="header">
+<img src="IMG_2528.jpeg" width="100%">
+</div>
+
+<!-- ハンバーガーメニュー部分 -->
+<div class="nav">
+    
+<!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+<input id="drawer_input" class="drawer_hidden" type="checkbox">
+    
+<!-- ハンバーガーアイコン -->
+<label for="drawer_input" class="drawer_open"><span></span></label>
+    
+<!-- メニュー -->
+<nav class="nav_content">
+<ul class="nav_list">
+<li class="nav_item"><a href="index.html">Top</a></li>
+<li class="nav_item"><a href="aboutme.html">About Me</a></li>
+<li class="nav_item"><a href="explore.html">explore</a></li>
+
+</ul>
+</nav>
+</div>
+<br>
+<br>
+<br>
+<div class="content">
+
+<h2>!!Please Beware of Disasters!!</h2>
+<br>
+<img src="IMG_2989.jpeg" width="300px"><br>
+<p>
+Japan is a country prone to earthquakes.
+I wouldn’t exactly call myself a disaster victim, but I have experienced them to some extent. You never know when an earthquake will strike. I’m writing this because I want everyone to be prepared.<br>
+I’ve moved several times, but fortunately, I’ve never suffered any damage.<br>
+During the Great Hanshin-Awaji Earthquake (in Japan’s Kansai region), I was asleep early in the morning when the ground started shaking violently. I heard the sound of frying pans and pots falling from the kitchen, but I couldn’t fight off my sleepiness and drifted back to sleep. However, since I still watched TV back then, I turned it on and saw that the situation was terrible. It was the first major earthquake I had ever seen since I was born. There were devastating fires, and places I recognized were damaged.<br>
+Some of my classmates had walls collapse or their homes destroyed, and I thought, “This is just too much!”<br><br>
+
+It took time, but the Kansai region pulled through thanks to the help of people from all over the world and Japan, as well as the solidarity of the local community.<br><br><br>
+
+Quite some time has passed since then, and I was living in a different place.<br>
+One afternoon, I was sitting out in public. Suddenly, the ground started shaking, and it kept shaking for quite a long time; tea spilled from a cup sitting on the table.<br>
+“I wonder where the epicenter is? A major earthquake must be happening far away. The vertical and horizontal shaking feels different from the previous earthquake,” I thought, breaking out in a cold sweat.<br>
+It was the Tohoku earthquake. I was still watching TV at the time, so I was heartbroken by the footage of the nuclear plant exploding and the devastation of the tsunami.
+<br><br>
+An acquaintance’s son found himself in a situation where he had to spend days collecting the bodies of people swept away by the tsunami. He told me, “No matter how many bodies I collected, they just kept coming… When will this cleanup ever end?”
+<br><br>
+Tohoku still bears the scars, but with earthquakes continuing to occur, I feel that people there must still be living in constant anxiety.
+<br><br>
+Earthquakes have also started occurring all over the country, in places like Kumamoto and Kanazawa.<br><br>
+Before long, X became a place for people to share information, and hashtags like “#AreYouOkayAfterTheEarthquake?” and “#Epicenter” appear in the trends. Both those watching TV and those who aren’t see these posts.<br><br>
+However, in recent years, there have been so many earthquakes that even fairly large ones are quickly swallowed up by algorithms on both TV and the internet, and the news media ends up dominated by trivial entertainment stories. As a result, I feel like more and more people are struggling to know what information to trust. Because earthquakes have occurred so frequently across the country, an abnormal situation has arisen where people have become “indifferent” or say, “I didn’t even know.”
+<br><br><br>
+I now live in a different place.
+Recently, there was a slight tremor with an epicenter in an area reminiscent of the “Nankai Trough Earthquake.” My neighborhood shook a little. It lasted about 30 seconds.<br><br>
+The “Nankai Trough Earthquake” is the most feared earthquake, capable of shattering the heart of Japan, and measures are being taken to prepare for it. However, what worries me is the presence of volcanoes like Mount Fuji in that area; if they erupted at the same time, it would be the end of Japan. Also, if a tsunami were to hit, I might not survive. The place where I live is old, and I suspect it would collapse.<br><br>
+
+That is why I want everyone to be prepared on a daily basis. Just because it hasn’t happened yet doesn’t mean it won’t happen. The same goes for volcanoes. I want you to always be mindful and prepare for multiple disasters.<br><br>
+That is why I created this flyer.<br>
+I believe you can print it by selecting “Fit to Page.”<br><br>
+Please feel free to use it if you like.<br>
+</p>
+<img src="IMG_2093.jpeg" width="100%"><br>
+<br>
+<br>
+<h5 style="text-align:center">All of these were made with an old iPhone.📱</h5>
+<h5 style="text-align:center">©  Nasu🍆Nasu All rights reserved</h5>
+</div>
+</body>
+</html>
