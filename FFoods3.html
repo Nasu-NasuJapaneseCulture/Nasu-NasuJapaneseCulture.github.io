@@ -10,7 +10,7 @@
 <link rel="icon" href="IMG_2606.png" sizes="192x192">
 
 <style>
-  a {color: #c5c56a;}
+  a {color: #d1be76;}
 body {margin: 0;
   font-family: 'Arial','monospace',sans-serif;}
 .header {
@@ -18,14 +18,14 @@ body {margin: 0;
   top: 0;
   width: 100%;}
 
-.content {padding: 20px;}
-/* 動画サイズ合わせるため↓ */
+.content{
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  padding-top: 260px;
+}
+
 img {display: block;}
-iframe {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  border: none;}
 /* ここから上が教えてくれた事 */
 
 /* ここから下がハンバーガーメニューに関するCSS */
@@ -116,8 +116,9 @@ right: 0;}
 </style>
 
 </head>
+ 
 
-<body bgcolor="#46502d" text="#dcd3b2">
+<body bgcolor="#716246" text="#dcd3b2">
 
 <!-- 自分の作ったヘッダー -->
 <div class="header">
@@ -142,11 +143,9 @@ right: 0;}
 </ul>
 </nav>
 </div>
-<br>
-<br>
-<br>
+  <br>
 <div class="content">
-
+  <br>
 
 <h2>Japanese Fermented foods 3 </h2>
 <br>
@@ -161,8 +160,14 @@ Mixing miso with sugar, and a little mirin if you have it, makes for an even mor
 <img src="IMG_2059.jpeg" width="100%"><br>
 
 <!-- ここに動画のリンク貼る -->
-<iframe title="Japanese fermented foods 3 _Miso" width="560" height="315" src="https://dudelike.wtf/videos/embed/8vVcwKY8AzmpC2scJTqjQj" style="border: 0px;" allow="fullscreen" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-<br>
+<div style="max-width:560px; margin:auto;">
+
+<iframe title="Japanese fermented foods 3 _Miso" 
+src="https://dudelike.wtf/videos/embed/8vVcwKY8AzmpC2scJTqjQj" 
+style="width:100%; aspect-ratio:16/9; border:0;"
+allow="fullscreen" 
+sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+
 <h5 style="text-align:center">All of these were made with an old iPhone.📱</h5>
 <h5 style="text-align:center">©  Nasu🍆Nasu All rights reserved</h5>
 </div>
